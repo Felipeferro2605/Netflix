@@ -13,15 +13,21 @@ class InicioPage extends StatelessWidget {
           children: <Widget>[
             CartelPrincipal(),
             this.listaHorizontal(),
-            this.listaHorizontal2('Peliculas', ItemImg(), 8),
-            this.listaHorizontal2('Ovas', ItemOvas(), 8),
+            this.listaHorizontal2('Peliculas', ItemImg(), 12),
+            this.listaHorizontal2('Ovas', ItemOvas(), 12),
           ],
         ),
         bottomNavigationBar: this.naviInferior());
   }
 
   BottomNavigationBar naviInferior() {
+    final List<Widget> _children = [];
+
+    int _currenIndex = 0;
+
     return BottomNavigationBar(
+      currentIndex: _currenIndex,
+      //onTap: salirLogin,
       backgroundColor: Colors.black,
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white54,
@@ -35,7 +41,9 @@ class InicioPage extends StatelessWidget {
         BottomNavigationBarItem(
             icon: Icon(Icons.arrow_downward), title: Text('Descargas')),
         BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz), title: Text('ajustes')),
+          icon: Icon(Icons.account_circle),
+          title: Text('Login'),
+        ),
       ],
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/Paginas/page_series.dart';
 
 import 'Paginas/Inicio.dart';
+import 'Paginas/login.dart';
 import 'Paginas/page_peliculas.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       //home: InicioPage(),
       initialRoute: "/",
       routes: {
-        "/": (BuildContext context) => InicioPage(),
+        "/": (BuildContext context) => LoginPage(),
+        "/inicio": (BuildContext context) => InicioPage(),
         "/peliculas": (BuildContext context) => PagePeliculas(),
         "/series": (BuildContext context) => PageSeries(),
       },
