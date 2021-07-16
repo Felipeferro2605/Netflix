@@ -69,7 +69,7 @@ class NavBarSuperior extends StatelessWidget {
 
   void _showPagePeliculas(BuildContext context) {
     Navigator.of(context).pushNamed("/peliculas",
-        arguments: PagePeliculasArgument(name: "ferroski"));
+        arguments: PagePeliculasArgument(name: "Ferro"));
   }
 
   void _showPageSeries(BuildContext context) {

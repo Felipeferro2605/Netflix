@@ -11,7 +11,7 @@ class PagePeliculas extends StatelessWidget {
     return Stack(
       children: [
         MaterialApp(
-          title: ("jaja si funciona"),
+          title: ("Peliculas"),
           home: ListaPeliculas(),
         )
       ],
@@ -55,7 +55,7 @@ class ListaPeliculas extends StatelessWidget {
         20,
         (i) => Container(
               width: double.infinity,
-              height: 120,
+              height: 100,
               color: colores[rnd.nextInt(this.colores.length)],
             ));
 
@@ -65,10 +65,13 @@ class ListaPeliculas extends StatelessWidget {
           SliverAppBar(
             floating: true,
             pinned: true,
-            title: Text("hola"),
+            title: Text(
+              "Peliculas",
+              style: TextStyle(color: Colors.white, fontSize: 30),
+            ),
             expandedHeight: 200,
-            flexibleSpace: Image.network(
-              "https://www.playerone.vg/wp-content/uploads/2020/01/1-12-e1578282709317.jpg",
+            flexibleSpace: Image.asset(
+              'assets/imgs/ovas/kake.jpg',
               fit: BoxFit.cover,
             ),
           ),

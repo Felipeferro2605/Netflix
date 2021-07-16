@@ -14,8 +14,8 @@ class ItemRedondeado extends StatelessWidget {
                   borderRadius: BorderRadius.circular(110),
                   border: Border.all(color: Colors.yellow, width: 3)),
               child: ClipOval(
-                child: Image.network(
-                  'https://static.wikia.nocookie.net/kurokonobasuke/images/b/b4/LG_Akashi.png/revision/latest?cb=20170802091307',
+                child: Image.asset(
+                  'assets/imgs/itemsRedondeados/aka.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -44,8 +44,8 @@ class ItemRedondeado2 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(110),
                   border: Border.all(color: Colors.red, width: 3)),
               child: ClipOval(
-                child: Image.network(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi3PmzZTOg6yJ5-XCtxg7PxBTLIBzMlPDSHg&usqp=CAU',
+                child: Image.asset(
+                  'assets/imgs/itemsRedondeados/kakashi.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -74,8 +74,8 @@ class ItemRedondeado3 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(110),
                   border: Border.all(color: Colors.green, width: 3)),
               child: ClipOval(
-                child: Image.network(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnrvL_hDLUPPgFLvC8RN__Jzpk1oLqtjYc5w&usqp=CAU',
+                child: Image.asset(
+                  'assets/imgs/itemsRedondeados/ita.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -104,8 +104,8 @@ class ItemRedondeado4 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(110),
                   border: Border.all(color: Colors.purple, width: 3)),
               child: ClipOval(
-                child: Image.network(
-                  'https://cdn.alfabetajuega.com/wp-content/uploads/2019/07/mihawk-one-piece.jpg',
+                child: Image.asset(
+                  'assets/imgs/itemsRedondeados/mihawk-one-piece.webp',
                   fit: BoxFit.cover,
                 ),
               ),

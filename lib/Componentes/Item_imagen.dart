@@ -14,8 +14,8 @@ class ItemImg extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black, width: 3)),
                 child: ClipPath(
-                  child: Image.network(
-                    'https://media.timeout.com/images/105292163/image.jpg',
+                  child: Image.asset(
+                    'assets/imgs/peliculas/castillo.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -35,8 +35,8 @@ class ItemImg extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey, width: 3)),
                 child: ClipPath(
-                  child: Image.network(
-                    'https://sergiojamon.com/wp-content/uploads/2020/05/Mary_y_la_flor_de_la_bruja-312285351-large-753x1024.jpg',
+                  child: Image.asset(
+                    'assets/imgs/peliculas/mary.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -56,8 +56,8 @@ class ItemImg extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.orange, width: 3)),
                 child: ClipPath(
-                  child: Image.network(
-                    'https://finde.latercera.com/wp-content/uploads/2020/06/Amor-de-gata-2-700x450.jpg',
+                  child: Image.asset(
+                    'assets/imgs/peliculas/mei.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -77,8 +77,8 @@ class ItemImg extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.red, width: 3)),
                 child: ClipPath(
-                  child: Image.network(
-                    'https://www.cinepremiere.com.mx/wp-content/uploads/2021/01/Mejores-anime-de-zombies-1-900x491.jpg',
+                  child: Image.asset(
+                    'assets/imgs/peliculas/sona.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

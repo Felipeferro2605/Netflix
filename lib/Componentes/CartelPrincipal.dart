@@ -17,8 +17,8 @@ class CartelPrincipal extends StatelessWidget {
   Widget cabecera() {
     return Stack(
       children: <Widget>[
-        Image.network(
-          'https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/YIVCS7Q5N5FA7KFJK5MIOZJIZQ.jpg',
+        Image.asset(
+          'assets/imgs/cartelprincipal.jpg',
           height: 400,
           fit: BoxFit.cover,
         ),
@@ -30,7 +30,7 @@ class CartelPrincipal extends StatelessWidget {
                   begin: Alignment.center,
                   end: Alignment.bottomCenter,
                   colors: <Color>[
-                Colors.black38,
+                Colors.black12,
                 Colors.black,
               ])),
         ),
