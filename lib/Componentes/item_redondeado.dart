@@ -119,3 +119,33 @@ class ItemRedondeado4 extends StatelessWidget {
     );
   }
 }
+
+class ItemRedondeado5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Stack(
+          children: <Widget>[
+            Container(
+              height: 110,
+              width: 110,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(110),
+                  border: Border.all(color: Colors.purple, width: 3)),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/imgs/itemsRedondeados/tenrou.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          width: 10.0,
+        )
+      ],
+    );
+  }
+}

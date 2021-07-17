@@ -69,9 +69,12 @@ class InicioPage extends StatelessWidget {
               ItemRedondeado2(),
               ItemRedondeado3(),
               ItemRedondeado4(),
-              ItemRedondeado2(),
+              ItemRedondeado5(),
               ItemRedondeado3(),
               ItemRedondeado4(),
+              ItemRedondeado2(),
+              ItemRedondeado3(),
+              ItemRedondeado5(),
             ],
           ),
         )

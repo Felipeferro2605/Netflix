@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:math';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:netflix/Paginas/page_peliculas.dart';
 
 class PageSeries extends StatelessWidget {
   const PageSeries({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class PageSeries extends StatelessWidget {
   }
 }
 
-class ListaPeliculas extends StatelessWidget {
+class ListaSeries extends StatelessWidget {
   final rnd = new Random();
 
   @override
