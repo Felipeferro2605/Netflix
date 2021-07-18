@@ -31,6 +31,14 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  flutter_modulo1_fake_backend:
+    path: C:\Users\Felipe\Desktop\myappflutter\Netflix\flutter_modulo1_fake_backend
+    
+    
+  http: ^0.13.3
+
+  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

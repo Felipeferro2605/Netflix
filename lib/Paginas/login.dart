@@ -3,6 +3,8 @@ import 'package:netflix/Paginas/inicio.dart';
 import 'package:netflix/Paginas/recibir.dart';
 import 'package:netflix/Paginas/registro.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
 
 class LoginPage extends StatefulWidget {
   static String id = "login";
@@ -22,35 +24,55 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.white,
       body: ListView(
         children: <Widget>[
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[_registerButton()],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[Text("No Estas Registrado?"), _registerButton()],
           ),
           SizedBox(
-            height: 70.0,
+            height: 60.0,
           ),
           Image.asset(
             'assets/imgs/LogoInicio.png',
-            height: 300.0,
+            height: 200.0,
           ),
           SizedBox(
-            height: 15.0,
+            height: 10.0,
           ),
-          _userTextfield(),
-          SizedBox(
-            height: 15.0,
-          ),
-          _passwordTextfield(),
-          SizedBox(
-            height: 15.0,
-          ),
-          Container(
-            child: Center(child: _loginButton()),
-          ),
-          SizedBox(
-            height: 15.0,
+          Transform.translate(
+            offset: Offset(0, 0),
+            child: Center(
+              child: SingleChildScrollView(
+                child: Card(
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 40),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 35, vertical: 20),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        _userTextfield(),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        _passwordTextfield(),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Container(
+                          child: Center(child: _loginButton()),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -99,6 +121,7 @@ class _LoginPageState extends State<LoginPage> {
     return StreamBuilder(
         builder: (BuildContext context, AsyncSnapshot snapshot) {
       return RaisedButton(
+        color: Colors.amber,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           child: Text('Iniciar Sesión'),
@@ -140,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 });
           } else if (usu == "felipe" && pass == "1234") {
-            _showPageInicio(context);
+            _showPageRecibir(context);
           } else if (usu != "felipe" && pass != "1234") {
             showDialog(
                 barrierDismissible: false,
@@ -205,7 +228,9 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.of(context).pushNamed("/inicio");
   }
 
-  void _showPageRecibir(BuildContext context) {
+  void _showPageRecibir(BuildContext context) async {
+    //try{
+    var url = '';
     final route = MaterialPageRoute(builder: (BuildContext context) {
       return PageRecibir(
         usuario: usu,
@@ -213,5 +238,8 @@ class _LoginPageState extends State<LoginPage> {
       );
     });
     Navigator.of(context).push(route);
+    //}catch{
+
+    //}
   }
 }
