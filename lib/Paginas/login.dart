@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             icon: Icon(Icons.email),
-            hintText: 'ejemplo@correo.com',
+            hintText: 'Ejemplo@correo.com',
             labelText: 'Usuario',
           ),
           onChanged: (value) {},
