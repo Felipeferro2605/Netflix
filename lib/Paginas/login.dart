@@ -7,7 +7,6 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 
 class LoginPage extends StatefulWidget {
-  static String id = "login";
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -15,6 +14,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final usuario = TextEditingController();
   final password = TextEditingController();
+  bool _loading = false;
 
   String usu = "";
   String pass = "";
@@ -121,11 +121,19 @@ class _LoginPageState extends State<LoginPage> {
     return StreamBuilder(
         builder: (BuildContext context, AsyncSnapshot snapshot) {
       return RaisedButton(
-        color: Colors.amber,
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-          child: Text('Iniciar Sesión'),
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        color: Colors.cyan,
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          Text('Iniciar Sesión'),
+          if (_loading)
+            Container(
+              height: 20,
+              width: 20,
+              margin: const EdgeInsets.only(left: 20),
+              child: CircularProgressIndicator(),
+            )
+        ]),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         onPressed: () {
           usu = usuario.text;
@@ -163,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 });
           } else if (usu == "felipe" && pass == "1234") {
-            _showPageRecibir(context);
+            _login(context);
           } else if (usu != "felipe" && pass != "1234") {
             showDialog(
                 barrierDismissible: false,
@@ -224,8 +232,16 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.of(context).pushNamed("/registro");
   }
 
-  void _showPageInicio(BuildContext context) {
-    Navigator.of(context).pushNamed("/inicio");
+  void _login(BuildContext context) {
+    if (!_loading) {
+      setState(() {
+        _loading = true;
+      });
+      Navigator.of(context).pushNamed("/inicio");
+      _loading = false;
+    }
+
+    //
   }
 
   void _showPageRecibir(BuildContext context) async {
